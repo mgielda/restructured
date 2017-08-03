@@ -72,6 +72,15 @@ Block quotes consist of indented body elements:
   This theory goes as follows and begins now.
   All brontosauruses are thin at one end, much much thicker in the middle and then thin again at the far end.
   That is my theory, it is mine, and belongs to me and I own it, and what it is too.
+
+Directives (in development)
+---------------------------
+
+Directives are started with a header of two dots, the directive name and two colons. Indented content usually follows:
+
+.. code::
+
+   This is a code block
 `;
 
 ReactDOM.render(<App text={text} />, document.getElementById('main'));
