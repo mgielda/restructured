@@ -15,6 +15,7 @@ import ReSTText from './ReSTText';
 import ReSTEmphasis from './ReSTEmphasis';
 import ReSTStrongEmphasis from './ReSTStrongEmphasis';
 import ReSTInlineLiteral from './ReSTInlineLiteral';
+import ReSTDirective from './ReSTDirective';
 
 export default function ReST({ element, key = null }) {
   switch (element.type) {
@@ -50,6 +51,8 @@ export default function ReST({ element, key = null }) {
       return new ReSTStrongEmphasis({ element, key });
     case 'literal':
       return new ReSTInlineLiteral({ element, key });
+    case 'directive':
+      return new ReSTDirective({ element, key });
     default:
       return <div key={key}></div>;
   }
